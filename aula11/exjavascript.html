@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Em que país vc mora?</title>
+</head>
+<body>
+        <h1>País!!!</h1>
+        Em que país vc mora??? <input id="input">
+        <input type="button" value = "checar"onclick=checar() onmouseover=mudar() onmouseout= sair()></input>
+        <div id="res"></div>
+    <script>
+        function checar(){
+            var a = window.document.querySelector('input#input')
+            var tex = a.value;
+            var res = document.getElementById('res')
+            if(tex != 'brasil'){
+                res.innerHTML = `Você é estrangeiro!!!!`
+            }else{
+                res.innerHTML = 'Você é brasileiro!!!'
+            }
+        }
+        function mudar(){
+            var b = document.getElementsByTagName('input')[1]
+            b.style.background = 'purple';
+            b.style.borderRadius = '0px';
+
+        }
+        function sair(){
+            var b = document.getElementsByTagName('input')[1]
+            b.style.background = 'grey';
+            b.style.borderRadius = '50px';
+        }
+    </script>
+</body>
+</html>
